@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top" />
+  <style>
+    body {
+      font-family: 'PT Sans', Arial, sans-serif;
+      background-size: cover;
+      background-color: #fbff4f;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center;
+      margin: 10px;
+      padding: 0;
+    }
+
+    .header {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: blue;
+      padding: 10px;
+      font-size: 24px;
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid #45a049;
+    }
+
+    .footer {
+      background-color: rgba(255, 255, 255, 0.3);
+      color: Blue;
+      padding: 10px;
+      font-size: 18px;
+      backdrop-filter: blur(10px);
+      border-top: 2px solid #45a049;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    input,
+    select {
+      padding: 10px;
+      margin: 2px 0;
+      width: 50%;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      background-color: white;
+      //rgba(255, 255, 255, 0.5)
+      backdrop-filter: blur(5px);
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #24a0ed;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: blue;
+    }
+
+    hr {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 20px 0;
+    }
+
+    #result {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      text-align: left;
+      font-size:14px;
+    }
+
+    #result span {
+      color: red;
+    }
+
+    .data-box {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px;
+      margin: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    table.data-box {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table.data-box td, table.data-box th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  table.data-box th {
+    background-color: #f2f2f2;
+  }
+
+  table.data-box tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  table.data-box tbody tr:hover {
+    background-color: #ddd;
+  }
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(5px);
+    }
+  .icon-rtl {
+  padding-left: 25px;
+  background: url("https://imagetolink.com/ib/qE") no-repeat left;
+  background-color:white;
+  background-size: 20px;
+  }
+  .form-outer {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 90%;
+    max-width: 1560px;
+    margin: auto;
+}
+.form-input {
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    font-size: 25px;
+    color: #4b00ff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    select::-ms-expand {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header" id="headerText" style="font-family:cambria;letter-spacing:3px;"></div>
+  <div class="container">
+    <center>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/bHn78CG/svv-re" alt="School Logo" width="200" height="150"><p style="color:#00008b;font-family:cambria;font-size:24px;letter-spacing:2px;">jh</p></center>
+    </div><br>
+    <div class="form-outer">
+      <div class="container">
+        <form class="form">
+          <div class="form-input">
+            <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <input type="text" id="phoneNumber" placeholder="Register Number" width="750px">
+          </div>
+          <div class="form-input">
+            <span class="icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+            <input type="text" id="dob" placeholder="dd/mm/yyyy">
+          </div>
+            <select id="sheetSelector" style="color: black; width:54%; background-color:white">
+              
+            <option value="page name">class</option>
+</select>
+        </form>
+      </div>
+    </div>
+    <br>
+    <button onclick="getDetail()" padding:10px 24px>Get Result</button>
+    <button onclick="printResult()">Print Result</button>
+    <hr>
+    <div id="result"></div>
+    <div class="footer" id="footerText">
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/s"></script>
+  <script>
+    function getDetail() {
+      let phoneNumber = document.querySelector('#phoneNumber').value;
+      let dob=document.querySelector('#dob').value;
+      let selectedSheet = document.querySelector('#sheetSelector').value;
+      let updateLocation = document.querySelector('#result');
+      updateLocation.innerHTML = "Fetching result...";
+
+      function onFailure(error) {
+        let warning = "<span style='color:red'>" + error + "</span>";
+        updateLocation.innerHTML = warning;
+      };
+
+      function onSuccess(response) {
+        updateLocation.innerHTML = response;
+      };
+
+      google.script.run.withFailureHandler(onFailure)
+        .withSuccessHandler(onSuccess)
+        .submitDT(phoneNumber, selectedSheet, dob);
+    };
+
+    function printResult() {
+      var printContents = document.getElementById("result").innerHTML;
+      var originalContents = document.body.innerHTML;
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
+    }
+
+    const headerElement = document.getElementById("headerText");
+
+    function typeHeaderText() {
+      let i = 0;
+      const typingInterval = 100;
+      const delayInterval = 1000;
+
+      function type() {
+        if (i < headerText.length) {
+          headerElement.innerHTML += headerText.charAt(i);
+          i++;
+          setTimeout(type, typingInterval);
+        }
+      }
+
+      setTimeout(type, delayInterval);
+    }
+
+    typeHeaderText();
+  </script>
+<script async src="https://www.googletagmanager"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CQ5SNBFVJE');
+</script>
+</body>
+</html>
